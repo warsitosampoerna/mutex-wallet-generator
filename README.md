@@ -16,7 +16,9 @@ This page generates a new Mutex address. It is self contained and does all the n
 ### Your wallet keys and recovery seed will be visible on the lower half of the page and additional keys and addresses can be created with the buttons near the top of the page.
 
 # Importing Paper/Offline wallet into mutex-wallet-cli 
-- From the mutex directory, start the mutex-wallet-cli (The full Mutex node must be running):
-- `./build/bin/mutex-wallet-cli --restore-deterministic wallet` 
-- You will be prompted to name you wallet and enter your 25 word seed
+- From the mutex directory, start the mutex node and the mutex-wallet-cli (The wallet-cli requires the daemon to be running):
+- In one terminal/screen type: `./build/bin/mutexd` 
+- In another terminal/screen type: `./build/bin/mutex-wallet-cli --restore-deterministic wallet` 
+- You will be prompted to name your wallet and enter your 25 word seed you created with the offline wallet.
+- Any XMX mined into the offline wallet should be available here. Type `refresh` or `balance`.
 - Transfer funds from the wallet command line eg: `transfer ZYZXSOME_WALLET_ADDRESS 20`
