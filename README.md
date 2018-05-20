@@ -1,4 +1,13 @@
-# monero-wallet-generator
-Monero/Aeon offline wallet generator
+# mutex-wallet-generator
+Mutex offline wallet generator
 
-This page generates a new Monero or Aeon address. It is self contained and does all the necessary calculations locally, so is suitable for generating a new wallet on a machine that is not connected to the network, and may even never be. This way, you can create a Monero or Aeon wallet without risking the keys. 
+This page generates a new Mutex address. It is self contained and does all the necessary calculations locally, so is suitable for generating a new wallet on a machine that is not connected to the network, and may even never be. This way, you can create a Mutex wallet without risking the keys. 
+
+
+# Creating a wallet
+- Download the tool in a zip file here: https://github.com/MutexProject/mutex-wallet-generator/archive/master.zip
+OR
+- download this repository by using git:
+`git clone https://github.com/MutexProject/mutex-wallet-generator.git`
+
+- Unzip and/or navigate to the downloaded directory and click on `mutex-wallet-generator.html`
