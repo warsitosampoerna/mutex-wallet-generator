@@ -10,3 +10,5 @@ This page generates a new Mutex address. It is self contained and does all the n
 - download this repository by using git: `git clone https://github.com/MutexProject/mutex-wallet-generator.git`
 - THEN
 - Unzip and/or navigate to the downloaded directory and click on/open `mutex-wallet-generator.html`
+
+# Your wallet keys and recovery seed will be visible on the lower half of the page and additional keys and addresses can be created with the buttons near the top of the page.

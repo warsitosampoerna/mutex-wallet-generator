@@ -10668,13 +10668,13 @@ html { font-family: sans-serif }
 
 
     <div class="row">
-        <div class="col s12">
+        <div class="col s8 offset-s2">
             <p>
-                This page generates a new
-                <select onchange="js:setCoin(this.selectedIndex);" class="waves-effect waves-light btn" style="max-width: 20%">
+                This page generates a new MUTEX
+                <!-- <select onchange="js:setCoin(this.selectedIndex);" class="waves-effect waves-light btn" style="max-width: 20%">
                   <option>Mutex</option>
                   <option>---</option>
-                </select>
+                </select> -->
                 wallet. It is self contained and
                 does all the necessary calculations locally, so is suitable for generating a new wallet on a machine
                 that is not connected to the network, and may even never be. This way, you can create
@@ -10683,21 +10683,21 @@ html { font-family: sans-serif }
         </div>
     </div>
     <div class="row valign-wrapper">
-        <div class="col s4 right-align ">
+        <div class="col s4 offset-s4 center-align ">
                 <input class="btn orange" type="button" onclick="js:genwallet(null);"
                        value="Generate wallet" id="gen_with_custom_entropy_button" action=""/>
                 <p>Custom entropy for deterministic wallet (leave empty to use the browser's PRNG)</p>
                 <input type="text" value="" id="user_entropy_widget" oninput="js:checkEntropy();" />
                 <div style="color: red; display: none" id="user_entropy_warning_widget">WARNING: entropy is way too low for the wallet to be secure: aim for 256 bits (about a hundred dice throws)</div>
         </div>
-        <div class="col s1 offset-s1"><h4>or</h4></div>
+        <!-- <div class="col s1 offset-s1"><h4>or</h4></div>
         <div class="col s5 offset-s1">
             <form>
                 <input class="btn deep-orange" type="button" onclick="js:genwallet_prefix();" value="Generate wallet with prefix" action="" id="gen_prefix_widget"/>
                 <p>(very slow for more than a few characters)</p>
                 <input type="text" value="4" id="prefix_widget" oninput="js:check_prefix_validity()"; />
             </form>
-        </div>
+        </div> -->
     </div>
     <div class="row center-align">
         <div class="col s12">
