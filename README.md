@@ -14,3 +14,9 @@ This page generates a new Mutex address. It is self contained and does all the n
 ---
 
 ### Your wallet keys and recovery seed will be visible on the lower half of the page and additional keys and addresses can be created with the buttons near the top of the page.
+
+# Importing Paper/Offline wallet into mutex-wallet-cli 
+- From the mutex directory, start the mutex-wallet-cli (The full Mutex node must be running):
+- `./build/bin/mutex-wallet-cli --restore-deterministic wallet` 
+- You will be prompted to name you wallet and enter your 25 word seed
+- Transfer funds from the wallet command line eg: `transfer ZYZXSOME_WALLET_ADDRESS 20`
