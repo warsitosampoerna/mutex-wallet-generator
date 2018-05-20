@@ -6,8 +6,7 @@ This page generates a new Mutex address. It is self contained and does all the n
 
 # Creating a wallet
 - Download the tool in a zip file here: https://github.com/MutexProject/mutex-wallet-generator/archive/master.zip
-OR
-- download this repository by using git:
-`git clone https://github.com/MutexProject/mutex-wallet-generator.git`
-
-- Unzip and/or navigate to the downloaded directory and click on `mutex-wallet-generator.html`
+- OR
+- download this repository by using git: `git clone https://github.com/MutexProject/mutex-wallet-generator.git`
+- THEN
+- Unzip and/or navigate to the downloaded directory and click on/open `mutex-wallet-generator.html`
