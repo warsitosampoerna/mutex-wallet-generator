@@ -8537,20 +8537,28 @@ return{_strlen:lb,_ge_mul8:Va,_keccak:db,_ge_scalarmult:Ta,_ge_fromfe_frombytes_
 
 
 
+// var moneroConfig = {
+//     coinUnitPlaces: 12,
+//     coinSymbol: 'XMR',
+//     coinName: 'Monero',
+//     coinUriPrefix: 'monero:',
+//     addressPrefix: 18
+// };
+// var aeonConfig = {
+//     coinUnitPlaces: 12,
+//     coinSymbol: 'AEON',
+//     coinName: 'Aeon',
+//     coinUriPrefix: 'aeon:',
+//     addressPrefix: 0xB2
+// };
 var moneroConfig = {
     coinUnitPlaces: 12,
-    coinSymbol: 'XMR',
-    coinName: 'Monero',
-    coinUriPrefix: 'monero:',
-    addressPrefix: 18
+    coinSymbol: 'XMX',
+    coinName: 'Mutex',
+    coinUriPrefix: 'mutex:',
+    addressPrefix: 0x26c8c2
 };
-var aeonConfig = {
-    coinUnitPlaces: 12,
-    coinSymbol: 'AEON',
-    coinName: 'Aeon',
-    coinUriPrefix: 'aeon:',
-    addressPrefix: 0xB2
-};
+
 var cnUtilGen = function(initConfig) {
     //var config = $.extend({}, initConfig);
     var config = initConfig;
@@ -10659,55 +10667,7 @@ html { font-family: sans-serif }
 <nav class="grey lighten-3">
     <div class="nav-wrapper">
         <a href="#" class="brand-logo center">
-            <img style="height:60px;" src="data:image/svg+xml;base64,
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk
-b2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246
-IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZH
-IDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5k
-dGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3Zn
-IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIw
-cHgiCgkgdmlld0JveD0iMTM1LjIgMjY3LjUgMzE1IDEwOS41IiBlbmFibGUtYmFja2dyb3VuZD0i
-bmV3IDEzNS4yIDI2Ny41IDMxNSAxMDkuNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnIGlkPSJH
-dWlkZXNfRm9yX0FydGJvYXJkIj4KPC9nPgo8ZyBpZD0iTGF5ZXJfMSI+Cgk8cGF0aCBpZD0iXzE0
-OTkzMTAzMl8yXyIgZmlsbD0iI0ZGNjYwMCIgZD0iTTE5Mi40LDI4Ni44Yy0yMC40LDAtMzYuOSwx
-Ni41LTM2LjksMzYuOWMwLDQuMSwwLjcsOCwxLjksMTEuN2gxMXYtMzFsMjQsMjRsMjQtMjR2MzEK
-CQloMTFjMS4yLTMuNywxLjktNy42LDEuOS0xMS43QzIyOS4zLDMwMy4zLDIxMi44LDI4Ni44LDE5
-Mi40LDI4Ni44TDE5Mi40LDI4Ni44eiIvPgoJPHBhdGggaWQ9Il8xNDk5MzExNjBfMl8iIGZpbGw9
-IiM0QzRDNEMiIGQ9Ik0xODYuOSwzMzMuOGwtMTAuNS0xMC41djE5LjVoLTRoLTRoLTcuNWM2LjUs
-MTAuNiwxOC4yLDE3LjcsMzEuNSwxNy43CgkJczI1LjEtNy4xLDMxLjUtMTcuN2gtNy41aC03LjJo
-LTAuOHYtMTkuNUwxOTgsMzMzLjhsLTUuNSw1LjVMMTg2LjksMzMzLjhMMTg2LjksMzMzLjh6Ii8+
-Cgk8cGF0aCBmaWxsPSIjNEM0QzRDIiBkPSJNNDMxLjksMzE1LjNjLTMuMS0zLjItNi45LTQuNy0x
-MS4yLTQuN2MtMi45LDAtNS42LDAuNy04LDIuMmMtMi41LDEuNC00LjUsMy40LTUuOSw1LjkKCQlj
-LTEuNCwyLjUtMi4xLDUuMi0yLjEsOC4xYzAsNC40LDEuNSw4LjIsNC42LDExLjRjMy4xLDMuMiw2
-LjksNC44LDExLjUsNC44YzQuNCwwLDguMi0xLjYsMTEuMy00LjdjMy4xLTMuMSw0LjYtNi45LDQu
-Ni0xMS40CgkJQzQzNi42LDMyMi4zLDQzNS4xLDMxOC40LDQzMS45LDMxNS4zeiBNNDI3LjgsMzM0
-LjJjLTIsMi00LjMsMy03LjEsM2MtMi41LDAtNC42LTAuOC02LjUtMi4zYy0yLjQtMi0zLjctNC43
-LTMuNy04LjEKCQljMC0zLjEsMS01LjYsMi45LTcuNmMxLjktMiw0LjMtMyw3LjItM2MyLjgsMCw1
-LjIsMSw3LjIsM2MyLDIsMyw0LjUsMyw3LjRDNDMwLjgsMzI5LjcsNDI5LjgsMzMyLjIsNDI3Ljgs
-MzM0LjJ6Ii8+Cgk8cGF0aCBmaWxsPSIjNEM0QzRDIiBkPSJNMzk0LjQsMzI4LjVjMi0wLjcsMy42
-LTEuOCw0LjYtMy4yYzEtMS40LDEuNS0zLjIsMS41LTUuM2MwLTItMC41LTMuOC0xLjQtNS4zYy0w
-LjktMS41LTIuMS0yLjUtMy43LTMuMgoJCXMtNC4xLTEtNy42LTFoLTExLjN2MzIuM2g2LjJ2LTEz
-LjdoNS40bDcuMywxMy43aDYuN0wzOTQuNCwzMjguNXogTTM5My40LDMyMi40Yy0wLjcsMC41LTEu
-MSwwLjgtMy4xLDAuOGgtNy43di02LjZoNy41CgkJYzEuNSwwLDEuOCwwLjEsMi40LDAuM2MwLjYs
-MC4yLDEuMSwwLjYsMS41LDEuMWMwLjQsMC41LDAuNSwxLjEsMC41LDEuOEMzOTQuNSwzMjEuMSwz
-OTQuMiwzMjEuOSwzOTMuNCwzMjIuNHoiLz4KCTxwb2x5Z29uIGZpbGw9IiM0QzRDNEMiIHBvaW50
-cz0iMzQ4LjksMzEwLjYgMzY5LjksMzEwLjYgMzY5LjksMzE2LjYgMzU1LDMxNi42IDM1NSwzMjMu
-MiAzNjkuOSwzMjMuMiAzNjkuOSwzMjkuMSAzNTUsMzI5LjEgCgkJMzU1LDMzNi44IDM2OS45LDMz
-Ni44IDM2OS45LDM0Mi45IDM0OC45LDM0Mi45IDM0OC45LDMxMC42IAkiLz4KCTxwb2x5Z29uIGZp
-bGw9IiM0QzRDNEMiIHBvaW50cz0iMzE2LjQsMzEwLjYgMzIyLjMsMzEwLjYgMzM2LjIsMzMxLjgg
-MzM2LjIsMzEwLjYgMzQyLjMsMzEwLjYgMzQyLjMsMzQyLjkgMzM2LjQsMzQyLjkgCgkJMzIyLjYs
-MzIxLjcgMzIyLjYsMzQyLjkgMzE2LjQsMzQyLjkgCSIvPgoJPHBhdGggZmlsbD0iIzRDNEM0QyIg
-ZD0iTTMwNi45LDMxNS4zYy0zLjEtMy4xLTYuOS00LjctMTEuMi00LjdjLTIuOSwwLTUuNSwwLjct
-OCwyLjJjLTIuNSwxLjQtNC40LDMuNC01LjksNS45CgkJYy0xLjQsMi41LTIuMSw1LjItMi4xLDgu
-MWMwLDQuNCwxLjUsOC4yLDQuNiwxMS40YzMsMy4yLDYuOSw0LjgsMTEuNSw0LjhjNC40LDAsOC4x
-LTEuNSwxMS4yLTQuN2MzLjEtMy4xLDQuNi02LjksNC42LTExLjQKCQlDMzExLjUsMzIyLjMsMzEw
-LDMxOC40LDMwNi45LDMxNS4zeiBNMzAyLjgsMzM0LjFjLTEuOSwyLTQuMywzLTcuMSwzYy0yLjUs
-MC00LjYtMC44LTYuNS0yLjNjLTIuNC0yLTMuNy00LjctMy43LTguMQoJCWMwLTMsMS01LjYsMi45
-LTcuNWMxLjktMiw0LjMtMyw3LjItM2MyLjgsMCw1LjIsMSw3LjIsM2MyLDIsMyw0LjUsMyw3LjRD
-MzA1LjcsMzI5LjcsMzA0LjcsMzMyLjEsMzAyLjgsMzM0LjF6Ii8+Cgk8cGF0aCBpZD0iXzc0NzQ5
-MDg4XzJfIiBmaWxsPSIjNEM0QzRDIiBkPSJNMjQ0LjgsMzEwLjZoNmw3LjUsMjIuNmw3LjYtMjIu
-Nmg1LjlsNS40LDMyLjNoLTUuOWwtMy41LTIwLjRsLTYuOSwyMC40aC01LjRsLTYuOC0yMC40CgkJ
-bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
+           <h3 style="margin-bottom: 15px; color: purple;"> MUTEX </h3>
         </a>
 
     </div>
@@ -10726,8 +10686,8 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
             <p>
                 This page generates a new
                 <select onchange="js:setCoin(this.selectedIndex);" class="waves-effect waves-light btn" style="max-width: 20%">
-                  <option>Monero</option>
-                  <option>Aeon</option>
+                  <option>Mutex</option>
+                  <option>---</option>
                 </select>
                 wallet. It is self contained and
                 does all the necessary calculations locally, so is suitable for generating a new wallet on a machine
@@ -10840,7 +10800,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
 
 
 <div class="row">&nbsp;</div>
-<footer class="page-footer grey lighten-3 grey-text text-darken-4">
+<!-- <footer class="page-footer grey lighten-3 grey-text text-darken-4">
     <div class="container">
         <div class="row">
             <div class="col l12">
@@ -10949,7 +10909,7 @@ place any email address in a new GPG key, so the right email being shown is no g
 </div>
             </div>
     </div>
-</footer>
+</footer> -->
 
 <script>
 window.onbeforeunload = function(e) {
