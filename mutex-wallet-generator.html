@@ -94,7 +94,7 @@
 -->
 
 <head>
-  <title>Monero offline wallet generator</title>
+  <title>Mutex offline wallet generator</title>
   <meta charset="UTF-8">
     <style type="text/css">
         html {
@@ -8536,22 +8536,8 @@ return{_strlen:lb,_ge_mul8:Va,_keccak:db,_ge_scalarmult:Ta,_ge_fromfe_frombytes_
 
 
 
-
-// var moneroConfig = {
-//     coinUnitPlaces: 12,
-//     coinSymbol: 'XMR',
-//     coinName: 'Monero',
-//     coinUriPrefix: 'monero:',
-//     addressPrefix: 18
-// };
-// var aeonConfig = {
-//     coinUnitPlaces: 12,
-//     coinSymbol: 'AEON',
-//     coinName: 'Aeon',
-//     coinUriPrefix: 'aeon:',
-//     addressPrefix: 0xB2
-// };
-var moneroConfig = {
+ 
+var mutexConfig = {
     coinUnitPlaces: 12,
     coinSymbol: 'XMX',
     coinName: 'Mutex',
@@ -8981,7 +8967,7 @@ var cnUtilGen = function(initConfig) {
 
     return this;
 };
-var cnUtil = cnUtilGen(moneroConfig);
+var cnUtil = cnUtilGen(mutexConfig);
 /*
  mnemonic.js : Converts between 4-byte aligned strings and a human-readable
  sequence of words. Uses 1626 common words taken from wikipedia article:
@@ -11147,7 +11133,7 @@ function setCoin(index)
   var language
   prefix_widget = document.getElementById("prefix_widget");
   if (index == 0) {
-    cnUtil = cnUtilGen(moneroConfig);
+    cnUtil = cnUtilGen(mutexConfig);
     prefix_widget.value = "4";
     enable = true
     language = "english"
